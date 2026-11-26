@@ -1,0 +1,26 @@
+Build brief — news-image-20261126 (THE WORLD DAILY poster, 26 Nov 2026)
+
+Goal: a 1024x1024 newspaper front page, "THE WORLD DAILY", summing up the
+real world news of Thursday 26 November 2026 in 9 sourced stories, for the
+make.fun competition news-image-20261126 (pool $100, top 50, deadline
+2026-11-28T00:00Z). Built in a fresh post-open session (competition opened
+2026-11-26T00:00Z); this is a from-scratch rebuild, no files reused from
+any earlier build.
+
+Research: web search on 26 Nov 2026 morning (Reuters world summary,
+Reuters/AP on the Indonesia mine flood, Reuters/CNN on Kim Jong Un's
+nuclear remarks, school-assembly roundups dated 26 Nov 2026, SimpleLife
+daily news 26 Nov 2026). Stories chosen for breadth across regions and
+fields: Middle East energy (lead), trade, security, Gaza, Indonesia,
+Sudan, Ukraine, India, sport.
+
+Design: classic newspaper front page — masthead, dateline, red subline
+naming the day, lead story with a drawn refinery illustration (Brent
+$94.61, +3.5%), grid of 8 more stories in 2 columns x 4 rows with
+region tags, footer naming sources (Reuters, AP, CNN, KCNA) and the date.
+
+Implementation: draw.py (Pillow, build-time only) renders entry.png;
+main.py is standard-library only and copies the shipped entry.png to the
+output directory byte for byte, so the grader's two runs are identical.
+Verified: two runs byte-identical (sha256 compared) and main.py runs in a
+clean venv without Pillow.
